@@ -1,0 +1,235 @@
+/* ── Reset & Base ── */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #fafafa;
+  --text: #1a1a1a;
+  --text-muted: #666;
+  --accent: #333;
+  --border: #e0e0e0;
+  --max-width: 640px;
+}
+
+body {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.75;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Layout ── */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 4rem 1.5rem 6rem;
+}
+
+/* ── Header / Site Title ── */
+.site-header {
+  margin-bottom: 3rem;
+}
+
+.site-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.site-title:hover {
+  opacity: 0.7;
+}
+
+.site-tagline {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* ── Intro ── */
+.intro {
+  margin-bottom: 3rem;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+.intro p + p {
+  margin-top: 0.75rem;
+}
+
+/* ── Post List ── */
+.post-list {
+  list-style: none;
+}
+
+.post-item {
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.post-item:first-child {
+  border-top: 1px solid var(--border);
+}
+
+.post-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  text-decoration: none;
+  color: var(--text);
+  gap: 1rem;
+}
+
+.post-link:hover .post-title {
+  opacity: 0.6;
+}
+
+.post-title {
+  font-size: 1rem;
+  font-weight: 600;
+  transition: opacity 0.15s ease;
+}
+
+.post-date {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+}
+
+/* ── Article Page ── */
+.article-header {
+  margin-bottom: 2.5rem;
+}
+
+.article-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+}
+
+.article-meta {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+}
+
+.article-body {
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.article-body h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 2.5rem 0 0.75rem;
+}
+
+.article-body h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 2rem 0 0.5rem;
+}
+
+.article-body p {
+  margin-bottom: 1.25rem;
+}
+
+.article-body ul,
+.article-body ol {
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+}
+
+.article-body li {
+  margin-bottom: 0.4rem;
+}
+
+.article-body blockquote {
+  border-left: 3px solid var(--border);
+  padding-left: 1.25rem;
+  margin: 1.5rem 0;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.article-body a {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.article-body a:hover {
+  opacity: 0.6;
+}
+
+/* ── Back Link ── */
+.back-link {
+  display: inline-block;
+  margin-bottom: 2rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.back-link:hover {
+  color: var(--text);
+}
+
+/* ── Post Navigation ── */
+.post-nav {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+.post-nav a {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.post-nav a:hover {
+  color: var(--text);
+}
+
+/* ── Footer ── */
+.site-footer {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* ── Responsive ── */
+@media (max-width: 480px) {
+  .container {
+    padding: 2.5rem 1.25rem 4rem;
+  }
+
+  .article-title {
+    font-size: 1.5rem;
+  }
+
+  .post-link {
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .post-date {
+    font-size: 0.75rem;
+  }
+}
