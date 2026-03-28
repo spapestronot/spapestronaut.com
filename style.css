@@ -54,9 +54,10 @@ body {
 }
 
 .site-pronunciation {
-  font-size: 0.65rem;
-  color: #b0b0b0;
+  font-size: 0.55rem;
+  color: #c8c8c8;
   font-style: italic;
+  font-weight: 300;
   letter-spacing: 0.03em;
 }
 
