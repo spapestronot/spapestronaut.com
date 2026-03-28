@@ -47,6 +47,19 @@ body {
   opacity: 0.7;
 }
 
+.site-title-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.site-pronunciation {
+  font-size: 0.65rem;
+  color: #b0b0b0;
+  font-style: italic;
+  letter-spacing: 0.03em;
+}
+
 .site-tagline {
   margin-top: 0.5rem;
   font-size: 0.95rem;
